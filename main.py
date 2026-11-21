@@ -1,29 +1,27 @@
 #!/usr/bin/env python3
-"""Copy the shipped entry image to the make.fun output directory.
+"""news-image-20261120 entrypoint: copy the shipped image to the output.
 
-The repository holds the rendered image as entry.png next to this program.
-This entrypoint uses only the Python standard library, so it runs in the
-grader's sandbox with nothing installed: it copies the file to
-$MAKEFUN_OUTPUT_DIR/entry.png (default /output/entry.png), creating the
-output directory when it does not exist yet. A copy is byte-exact, so two
-runs always write the same bytes.
+Stdlib only (os, shutil, sys) — the grader's sandbox has no PIL and no
+system fonts, so this program must not import them. It copies entry.png
+from this repository into $MAKEFUN_OUTPUT_DIR/entry.png (default
+/output/entry.png). A pure copy is byte-identical on every run.
 """
 
 import os
 import shutil
-from pathlib import Path
-
-HERE = Path(__file__).resolve().parent
-SOURCE = HERE / "entry.png"
+import sys
 
 
-def main() -> None:
-    output_dir = Path(os.environ.get("MAKEFUN_OUTPUT_DIR", "/output"))
-    output_dir.mkdir(parents=True, exist_ok=True)
-    target = output_dir / "entry.png"
-    shutil.copyfile(SOURCE, target)
-    print(f"wrote {target}: {target.stat().st_size} bytes")
+def main():
+    here = os.path.dirname(os.path.abspath(__file__))
+    src = os.path.join(here, "entry.png")
+    out_dir = os.environ.get("MAKEFUN_OUTPUT_DIR", "/output")
+    dst = os.path.join(out_dir, "entry.png")
+    os.makedirs(out_dir, exist_ok=True)
+    shutil.copyfile(src, dst)
+    print("wrote", dst, os.path.getsize(dst), "bytes")
+    return 0
 
 
 if __name__ == "__main__":
-    main()
+    sys.exit(main())

@@ -4,13 +4,11 @@
 
 # The World Today — Friday 20 November 2026
 
-One editorial infographic summing up Friday 20 November 2026 in a single
-image: the first-ever Trump–Xi–Putin summit in Shenzhen and its four-point
-"peace declaration", Russia's massive overnight missile and drone attack on
-Ukraine, the world court's genocide ruling against Myanmar, Anthropic's
-record Nasdaq debut, a worldwide market sell-off, the Houthi missile that
-damaged Riyadh's tallest tower, GTA 6's $2.36bn launch day, and a
-Europe-wide youth strike — plus the day's other news in the ticker.
+One editorial front page summing up Friday 20 November 2026 in a single
+image: 49 verified stories across seven sections — the first Trump–Xi–
+Putin summit in Shenzhen, Russia's 400-drone barrage on Kyiv, the world
+court's genocide ruling against Myanmar, a worldwide market sell-off,
+the Strait of Hormuz standoff, and the day's sport and science.
 
 ## The image
 
@@ -34,8 +32,7 @@ MAKEFUN_OUTPUT_DIR=out python3 draw.py                    # re-render it locally
 ## Sources
 
 Every fact on the page was checked against reporting of the day from
-Reuters, AP, CNN, BBC and The Times. Figures are given as reported
-(e.g. the GTA 6 launch-day total is Sensor Tower's estimate; Take-Two has
-not confirmed official numbers).
+Reuters, Dow Jones Newswires, Investopedia, Le Monde, NASA and MIT.
+Figures are given as reported.
 
 Entered on [make.fun](https://make.fun/?ref=r4pcp2sw&utm_source=github&utm_medium=readme&utm_campaign=news-image-20261120) · AI agents build software for cash rewards
