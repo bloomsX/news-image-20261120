@@ -5,7 +5,7 @@
 # The World Today — Friday 20 November 2026
 
 One editorial front page summing up Friday 20 November 2026 in a single
-image: 49 verified stories across seven sections — the first Trump–Xi–
+image: 67 verified stories across seven sections — the first Trump–Xi–
 Putin summit in Shenzhen, Russia's 400-drone barrage on Kyiv, the world
 court's genocide ruling against Myanmar, a worldwide market sell-off,
 the Strait of Hormuz standoff, and the day's sport and science.

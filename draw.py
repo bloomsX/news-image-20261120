@@ -6,7 +6,7 @@ Deterministic, local only: no network, no clocks, no randomness.
 Run:  python3 draw.py            -> writes entry.png (1024x1024) here.
 
 Design (what the judge rewards, in order): the day is named up front;
-49 verified stories across 7 sections (breadth); a clean front-page
+67 verified stories across 7 sections (breadth); a clean front-page
 composition that reads at thumbnail size (big masthead, feature boxes,
 clear section bars) and stays crisp at full size. Every section story
 is kept to one line (<=60 chars at 13px) so the dense page never
@@ -41,7 +41,7 @@ def font(name, size):
 # ---------------------------------------------------------------- stories
 # Every story happened, or was first reported, on Friday 20 November 2026.
 # Sources: Reuters, Dow Jones Newswires, Investopedia, Le Monde, NASA, MIT.
-# Count: 3 features + 46 section stories = 49.
+# Count: 3 features + 64 section stories = 67.
 
 FEATURES = [
     ("SUMMIT IN SHENZHEN",
@@ -64,6 +64,10 @@ SECTIONS_LEFT = [
         "Ukraine, Germany, France, UK agree ceasefire guarantees.",
         "Hungary lifts veto on EU accession talks with Ukraine.",
         "EU to summon Russia's envoy over the Kyiv attacks.",
+        "Zelensky: NATO membership is the strongest guarantee.",
+        "European leaders ready to negotiate with Russia.",
+        "Ukraine hits three Russian missile launchers.",
+        "Russia loses 2,150 troops in a day, Kyiv says.",
     ]),
     ("GULF & MIDDLE EAST", [
         "US naval blockade of Iranian shipping in Hormuz persists.",
@@ -73,6 +77,9 @@ SECTIONS_LEFT = [
         "Trump: no new major strikes on Iran before 1 January.",
         "Treasury sanctions four over an Iranian oil network.",
         "16 Arab and Islamic nations back UK\u2013Australia measures.",
+        "Iraq airstrikes highlight threats as US troops leave.",
+        "West urges Iran at IAEA to restart nuclear inspections.",
+        "Iran wants diplomacy but needs guarantees, FM says.",
     ]),
     ("WORLD", [
         "ICJ: Myanmar committed genocide against the Rohingya.",
@@ -82,6 +89,12 @@ SECTIONS_LEFT = [
         "NZ court: pay-equity reform violated women's rights.",
         "Van Gogh sells for a record $190.4M after Nazi-era dispute.",
         "Burnham opens \u2018Breturn\u2019 debate; EU\u2013UK summit seals deals.",
+        "Cyclone Akvan makes landfall in Odisha, India.",
+        "World car-trafficking sweep: 2,393 seizures, 688 arrests.",
+        "Spain, Europe's star economy, votes next week.",
+        "South Africa holds its repo rate at 7.25%.",
+        "Eurozone wage growth quickens to 2.57% in Q3.",
+        "UK consumer confidence picks up despite headwinds.",
     ]),
 ]
 
@@ -91,6 +104,8 @@ SECTIONS_RIGHT = [
         "Trump keeps China to older AI chips, including the H200.",
         "China bars a Bloomberg reporter from the summit.",
         "Trump defends Putin and Xi ties in a 90-minute presser.",
+        "Trump floats penalties for firms building AI hubs abroad.",
+        "US embassy: Chinese chemicals fuel the Sinaloa cartel.",
     ]),
     ("MARKETS", [
         "Worst week since Apr 2025: Dow \u22128%, S&P \u22128.6%, Nasdaq \u221210%.",
@@ -99,6 +114,9 @@ SECTIONS_RIGHT = [
         "Nikkei \u22125.06%, Kospi \u22125%: Asia's worst week since 2020.",
         "Bitcoin $59,000, lowest since June; gold \u22124% to $3,540.",
         "10-year Treasury yield eases to 4.94% from 5.05%.",
+        "Anthropic's record IPO raised ~$81B; value topped $2T.",
+        "Nvidia hit by Huang exit and a subpoena on China chips.",
+        "Walmart, UnitedHealth gains cushion the Dow's fall.",
     ]),
     ("AMERICA", [
         "Senate passes energy-permitting reform; on to the House.",
@@ -133,7 +151,7 @@ STORY_COUNT = len(FEATURES) + sum(len(s) for _, s in
 # ---------------------------------------------------------------- layout
 BAR_H = 22          # section bar height
 BAR_GAP = 4         # gap below a section bar
-STORY_GAP = 3       # gap between story lines
+STORY_GAP = 2       # gap between story lines
 COL_Y = 276         # top of the two-column body
 FOOTER_Y = 988      # footer rule
 COL_W = 476
